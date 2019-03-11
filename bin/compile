@@ -106,4 +106,4 @@ topic "Rewrite package-config files"
 find $BUILD_DIR/.apt -type f -ipath '*/pkgconfig/*.pc' | xargs --no-run-if-empty -n 1 sed -i -e 's!^prefix=\(.*\)$!prefix='"$BUILD_DIR"'/.apt\1!g'
 
 topic "Setup DataDog extension"
-echo "/app/.apt/opt/datadog-php/extensions/ddtrace-20170718.so" >> /app/.heroku/php/etc/php/php.ini
+echo "extension=/app/.apt/opt/datadog-php/extensions/ddtrace-20170718.so" >> /app/.heroku/php/etc/php/php.ini
