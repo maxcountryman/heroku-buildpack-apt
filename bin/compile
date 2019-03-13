@@ -109,5 +109,5 @@ topic "Setup DataDog extension"
 touch /app/.heroku/php/etc/php/conf.d/datadog-php-custom.ini
 echo "[PHP]" >> /app/.heroku/php/etc/php/conf.d/datadog-php-custom.ini
 echo "extension=/app/.apt/opt/datadog-php/extensions/ddtrace-20170718.so" >> /app/.heroku/php/etc/php/conf.d/datadog-php-custom.ini
-touch /app/php_errors.log
-echo "error_log = php_errors.log" >> /app/.heroku/php/etc/php/conf.d/datadog-php-custom.ini
+touch /app/.heroku/php/php_errors.log
+echo "error_log = /app/.heroku/php/php_errors.log" >> /app/.heroku/php/etc/php/conf.d/datadog-php-custom.ini
